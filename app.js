@@ -13,6 +13,10 @@
 			console.log(this);
 			//console.log('moosipurgi sees');
 
+			// KÕIK MUUTUJAD, mis on üldised ja muudetavad
+			this.click_count = 0;
+
+
 			//panen rakenduse tööle
 			this.init();
 		};
@@ -28,7 +32,9 @@
 					document.querySelector('.add-new-jar').addEventListener('click', this.addNewClick.bind(this));
 				},
 				addNewClick: function(event){
-					console.log(event);
+					//console.log(event);
+					this.click_count++;
+					console.log(this.click_count);
 
 				}
 
